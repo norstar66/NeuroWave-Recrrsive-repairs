@@ -1,0 +1,85 @@
+capstone CLI commands:
+
+- mvn clean install
+
+- mvn spring-boot:run
+
+<!--clear dependencies process-->
+
+
+Correct the Dependency
+Update your pom.xml to include the correct dependency:
+
+xml Copy code:
+<dependency>
+    <groupId>com.mysql.cj</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.1.0</version>
+    <scope>runtime</scope>
+</dependency>
+
+
+Clear Local Repository Cache
+Sometimes Maven's local cache becomes corrupted. To clear it:
+
+- 1. Navigate to your local Maven repository:
+
+-2. Copy code:
+    ~/.m2/repository/com/mysql/cj/
+    Delete the mysql-connector-java folder if it exists.
+
+
+Alternatively, run the following Maven command to force a re-download of dependencies:
+
+  - bash - Copy code:
+    mvn dependency:purge-local-repository
+
+  Force Maven to Use Central Repository
+
+Ensure that Maven is using the correct central repository:
+
+Open your global Maven settings file (typically ~/.m2/settings.xml).
+Ensure it contains the following <mirrors> section to point to Maven Central:
+xml
+Copy code
+<mirrors>
+    <mirror>
+        <id>central</id>
+        <mirrorOf>*</mirrorOf>
+        <url>https://repo.maven.apache.org/maven2</url>
+    </mirror>
+</mirrors>
+
+
+If settings.xml doesn't exist, create it in ~/.m2/ with the content above.
+
+Test the Dependency
+Once updated, run:
+
+bash
+Copy code
+mvn clean install
+
+
+If you’re using IntelliJ IDEA or another IDE:
+
+Open the Maven tab in your IDE.
+Select Reload All Maven Projects.
+Check for Proxy Issues
+If you’re behind a corporate firewall or proxy:
+
+Configure your proxy settings in ~/.m2/settings.xml:
+xml
+Copy code
+<proxies>
+    <proxy>
+        <id>example-proxy</id>
+        <active>true</active>
+        <protocol>http</protocol>
+        <host>proxy.example.com</host>
+        <port>8080</port>
+        <username>proxyuser</username>
+        <password>somepassword</password>
+        <nonProxyHosts>www.google.com|*.example.com</nonProxyHosts>
+    </proxy>
+</proxies>

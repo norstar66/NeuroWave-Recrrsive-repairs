@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroWave - Learning Adventure</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <!-- Inline CSS for overriding page-specific styles -->
+    <style>
+        /* Buffer for left and right of the investors page */
+        .investors-section,
+        .investment-table,
+        .contact-form {
+            padding-left: 40px; /* Adding left buffer */
+            padding-right: 40px; /* Adding right buffer */
+            max-width: 1000px; /* Constrain width for better readability */
+            margin: 0 auto; /* Centering content */
+        }
+
+        /* Local style override for dropdown to match the page theme */
+        #investmentDropdown {
+            width: 100%; /* Full width to align with other elements */
+            padding: 10px; /* Spacing for better usability */
+            margin: 20px 0; /* Top and bottom spacing */
+            border-radius: 5px; /* Rounded edges for a softer look */
+        }
+
+        /* Local style override for the investment details section */
+        .investment-details {
+            margin-top: 20px; /* Spacing to separate from dropdown */
+            padding: 20px; /* Padding for better visual spacing */
+            background-color: #333; /* Background color to differentiate */
+            color: #f4f4f4; /* Light text color for readability */
+            border-radius: 10px; /* Rounded corners for consistency */
+        }
+
+        /* Table styling specific to the investors page */
+        .investment-table table {
+            width: 100%; /* Full width for consistency */
+            border-collapse: collapse; /* Collapse borders to avoid gaps */
+            margin-top: 20px; /* Spacing above table */
+            background-color: #222; /* Dark background for contrast */
+        }
+
+        .investment-table th, .investment-table td {
+            padding: 15px; /* Padding for spacing */
+            text-align: left; /* Align text to the left */
+            border-bottom: 1px solid #444; /* Add border to separate rows */
+            color: #f4f4f4; /* Light text color for readability */
+        }
+
+        .investment-table th {
+            background-color: #444; /* Darker background for headers */
+            font-weight: bold; /* Bold text for headers */
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Header Section -->
+<header>
+    <!-- Natural Language Pseudocode: Create a navigation bar for easy access to the three pages: Home, Investors, Learning Adventures -->
+    <section class="header">
+        <nav>
+            <ul>
+                <!-- Company Logo -->
+                <li><img src="/static/img/justwordsRedGrid.png" alt="NeuroWave Logo" style="height: 80px; width: auto;"></li>
+                <li><a href="http://localhost:8080/">Home</a></li>
+                <li><a href="http://localhost:8080/adventures">Adventures</a></li>
+                <li><a href="http://localhost:8080/investors">Investors</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 50px 40px; text-align: center;">
+    <h1>PowerUp with Us</h1>
+    <h1>Invest Now</h1>
+    <p>
+        AI is rapidly changing our reality. The potential for change is unmatched.
+        AI is bigger than the Beatles, bigger than Samuel L. Jackson. Now that's sayin' something.
+        A wave like this comes once in a lifetime.
+        This is the wave to ride into a better future for everyone.
+    </p>
+    <button class="cta-button">Get in Touch</button>
+</section>
+
+<!-- Investors Section -->
+<section class="investors-section">
+    <h2>Invest in NeuroWave</h2>
+    <p>Select an investment option to learn more:</p>
+    <div class="dropdown">
+        <select id="investmentDropdown">
+            <option value="" disabled selected>Select an option</option>
+            <option value="5">5% Purchase - $200,000</option>
+            <option value="2">2% Purchase - $105,000</option>
+            <option value="1">1% Purchase - $65,000</option>
+            <option value="donation">Donation - $500+</option>
+        </select>
+    </div>
+    <div id="investmentDetails" class="investment-details">
+        <!-- Investment details will appear here -->
+    </div>
+</section>
+
+<!-- Investment Opportunities Section -->
+<section class="investment-table">
+    <h2>Investment Opportunities</h2>
+    <p>Here are some of the potential funding options and benefits for investors:</p>
+    <table>
+        <tr>
+            <th>Investment Level</th>
+            <th>Benefits</th>
+        </tr>
+        <tr>
+            <td>Seed Funding</td>
+            <td>Early access to product, equity, personalized perks</td>
+        </tr>
+        <tr>
+            <td>Scholar Investment</td>
+            <td>Product influence, VIP access, equity</td>
+        </tr>
+        <tr>
+            <td>Strategic Partnership</td>
+            <td>In-depth collaboration, joint ventures</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Contact Form Section -->
+<section class="contact-form">
+    <h2>Interested in Investing?</h2>
+    <form action="submit.html" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+            <!-- TODO add newsletter
+            (tech topics sections: AI announcements to the paper ceiling and best GitRepos -->
+        <button type="submit" class="cta-button">Submit</button>
+    </form>
+</section>
+</body>
+<!-- Footer Section -->
+<footer class="footer">
+    <ul>
+
+        <li><a href="http://localhost:8080/">Home</a></li>
+        <li><a href="http://localhost:8080/adventures">Adventures</a></li>
+        <li><a href="http://localhost:8080/investors">Investors</a></li>
+    </ul>
+    <p class="footer-small-text">&copy; 2024 com.NorstarPhoenix.NeuroWave.SBA.307-308 All Rights Reserved.</p>
+</footer>
+</html>

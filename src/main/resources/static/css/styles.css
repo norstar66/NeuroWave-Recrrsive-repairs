@@ -1,0 +1,212 @@
+/* General Styles */
+/* Reset and Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: dimgrey;
+    color: #fff;
+}
+
+/* Header and Footer Styles */
+.header, .footer {
+    background-color: #222;
+    color: #bbb;
+    padding: 20px;
+    text-align: center;
+    flex-shrink: 0; /* Prevents the header and footer from shrinking */
+}
+
+.header nav ul, .footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header nav ul li, .footer ul li {
+    display: inline-block;
+}
+
+.header nav ul li a, .footer ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover, .footer ul li a:hover {
+    color: #fff;
+}
+
+/* Set the global background color for the entire site */
+body {
+    background-color: dimgrey; /* Site-wide background color */
+    color: #fff; /* Default text color for readability */
+    font-family: Arial, sans-serif; /* Set default font for the site */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Padding and border included total width and height */
+}
+
+/* Header Styles */
+/* Acts on all pages */
+/* Style the header section including navigation */
+.header {
+    background-color: #222; /* Dark background for the header */
+    padding: 20px 0; /* Padding for top and bottom of header */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items in the header */
+    justify-content: space-between; /* Space out items to edges */
+}
+
+/* Navigation Styling */
+/* Acts on all pages */
+/* Style the unordered list containing navigation links */
+.header nav ul {
+    list-style: none; /* Remove bullet points from list items */
+    padding: 0; /* Remove padding from list */
+    display: flex; /* Flex display for horizontal navigation */
+    gap: 20px; /* Add space between navigation links */
+}
+
+/* Individual Navigation Links */
+/* Acts on all pages */
+.header nav ul li {
+    display: inline-block; /* Display list items inline for horizontal navigation */
+}
+
+/* Anchor Tag Styles for Navigation */
+/* Acts on all pages */
+/* Style for navigation links */
+.header nav ul li a {
+    color: #fff; /* White text color for contrast */
+    text-decoration: none; /* Remove underline from links */
+    padding: 8px 16px; /* Add padding around links */
+    transition: background-color 0.3s ease; /* Smooth transition effect for background changes */
+}
+
+/* Anchor Hover State */
+/* Acts on all pages */
+/* Change background color on hover */
+.header nav ul li a:hover {
+    background-color: #444; /* Lighter background on hover */
+    border-radius: 4px; /* Add slight rounding for a button effect */
+}
+
+/* Hero Section Styles */
+/* Acts on index.html */
+/* Styles for the hero image section */
+.landing-hero {
+    text-align: center; /* Center align text in hero section */
+    padding: 50px 20px; /* Top and bottom padding for spacing */
+    color: #00bcd4; /* Highlighted color for main text */
+}
+
+/* CTA Button Styling */
+/* Acts on index.html */
+/* Styles for the call-to-action button */
+.cta-button {
+    background-color: #00bcd4; /* Primary button color */
+    color: #fff; /* Text color for contrast */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 8px; /* Rounded corners for button */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer to indicate clickable button */
+    transition: transform 0.2s ease; /* Add smooth scaling effect */
+}
+
+/* Button Hover Effect */
+/* Acts on index.html */
+/* Make the button grow slightly on hover for visual engagement */
+.cta-button:hover {
+    transform: scale(1.1); /* Slightly increase button size */
+}
+
+/* Problem Statement Section Styles */
+/* Acts on index.html */
+/* Styles for the problem statement section */
+.problem-statement {
+    padding: 40px; /* Spacing around the problem statement */
+    background-color: #333; /* Dark background for contrast */
+    color: #f4f4f4; /* Light text color for readability */
+    border-radius: 10px; /* Rounded edges for a softer appearance */
+    margin: 20px auto; /* Center the section with margin */
+    max-width: 800px; /* Constrain width for readability */
+}
+
+/* How It Works Section Styles */
+/* Acts on index.html */
+/* Styles for the "How It Works" section */
+.how-it-works {
+    padding: 40px; /* Spacing for the section */
+    background-color: #444; /* Background color to differentiate section */
+    color: #fff; /* White text color for readability */
+}
+
+/* Bullet List Styles in How It Works Section */
+/* Acts on index.html */
+/* Styling for list items in "How It Works" section */
+.how-it-works ul {
+    list-style-type: disc; /* Use disc bullet points for list */
+    padding-left: 20px; /* Indent the list for clarity */
+}
+
+/* Testimonials Section Styles */
+/* Acts on index.html */
+/* Styles for the testimonials section */
+.testimonials {
+    padding: 40px; /* Padding for spacing */
+    background-color: #7a229a; /* Background color for emphasis */
+    color: #fff; /* White text color */
+    margin: 20px; /* Margin to separate section visually */
+    border-left: 5px solid #2c2a2a; /* Accent border to draw attention */
+}
+
+
+/* Footer Section Styles */
+/* Acts on all pages */
+/* Styles for the footer section */
+.footer {
+    background-color: #222; /* Dark background for footer */
+    color: #bbb; /* Light gray text color for contrast */
+    padding: 20px; /* Padding around footer content */
+    text-align: center; /* Center align footer text */
+}
+
+/* Footer Navigation Links */
+/* Acts on all pages */
+/* Footer links styling */
+.footer ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flex for horizontal layout */
+    justify-content: center; /* Center items in footer */
+    gap: 15px; /* Space between footer links */
+    margin-bottom: 10px; /* Space below navigation links */
+}
+
+.footer ul li a {
+    color: #bbb; /* Light gray text for footer links */
+    text-decoration: none; /* Remove underline for links */
+    transition: color 0.3s ease; /* Smooth transition for link hover color */
+}
+
+/* Footer Navigation Link Hover Effect */
+/* Acts on all pages */
+/* Darken link color on hover for feedback */
+.footer ul li a:hover {
+    color: #fff; /* White color for hover effect */
+}
+
+/* Small Text Styling in Footer */
+/* Acts on all pages */
+/* Style for the small copyright notice text */
+.footer-small-text {
+    font-size: 0.8em; /* Small font for less emphasis */
+    color: #888; /* Lighter gray color for de-emphasis */
+}

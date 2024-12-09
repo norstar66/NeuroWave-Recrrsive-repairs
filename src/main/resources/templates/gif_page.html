@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            animation: scaleUp 2s forwards;
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.1);
+                opacity: 1;
+            }
+            90% {
+                transform: scale(4);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <!--
+</head>
+<body>
+<img src="img/gif/39428791_MotionElements_binary-code-rain-of-0s-and-1s-in-high-tech-digital-4k.gif" alt="Loading">
+<script>
+    // Get the target URL from the query parameter
+    const params = new URLSearchParams(window.location.search);
+    const targetUrl = params.get("target");
+
+    // Redirect to the final page after the GIF plays
+    setTimeout(() => {
+        if (targetUrl) {
+            window.location.href = targetUrl;
+        } else {
+            console.error("No target URL specified. Redirecting to default page.");
+            window.location.href = "index.html"; // Fallback to home page
+        }
+    }, 2000); // Adjust delay to match animation duration
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroWave - Learning Adventure</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script defer src="/static/js/adventures.js"></script>
+</head>
+<body>
+<header>
+    <section class="header">
+        <nav>
+            <ul>
+                <li><img src="/static/img/justwordsRedGrid.png" alt="NeuroWave Logo" style="height: 80px; width: auto;"></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/adventures">Adventures</a></li>
+                <li><a href="/investors">Investors</a></li>
+            </ul>
+        </nav>
+    </section>
+</header>
+
+<main class="flex-container">
+    <h1>Login to Start Your Adventure</h1>
+    <section class="top-to-bottom-container">
+        <!-- Button -->
+        <button class="github-login-btn">Login with GitHub</button>
+        <script>
+            document.getElementById("login-button").addEventListener("click", () => {
+                window.location.href = "/oauth2/authorization/github";
+            });
+        </script>
+
+        <!-- Image -->
+        <div class="hero-image-wrapper">
+            <img src="/static/img/Lumina.png" alt="Hero Image" class="hero-image">
+        </div>
+
+        <!-- iframe -->
+        <iframe
+                src="http://localhost:8080/oauth2/authorization/github"
+                width="100%"
+                height="600px"
+                style="border: none;"
+        ></iframe>
+
+    </section>
+</main>
+
+<footer class="footer">
+    <ul>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/adventures">Adventures</a></li>
+        <li><a href="/investors">Investors</a></li>
+    </ul>
+    <p class="footer-small-text">&copy; 2024 NeuroWave. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

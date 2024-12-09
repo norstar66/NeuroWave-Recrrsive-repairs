@@ -1,0 +1,3 @@
+- [ ] Add Architecture diagrams 
+- [ ] Add Database schema 
+- [ ] Add description of the project tech stack
