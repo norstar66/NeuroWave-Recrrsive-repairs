@@ -1,7 +1,5 @@
 package com.norstarphoenix.neurowavecapstone.models;
 
-package com.norstarphoenix.neurowavecapstone.models;
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,10 +1,11 @@
 package com.norstarphoenix.neurowavecapstone.models;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
+import java.util.Set;
 
 @Getter
 @Setter
@@ -27,6 +28,12 @@ public class User {
 
     @Column(nullable = false)
     private String passwordHash;
+
+
+    @Setter
+    @Getter
+    @Transient
+    private String password;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(

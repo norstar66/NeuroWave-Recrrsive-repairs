@@ -38,18 +38,4 @@ public class LoginController {
         model.addAttribute("error", "Invalid username or password");
         return "login"; // Show login page with error message
     }
-
-    @PostMapping("/login")
-    public String processLogin(@ModelAttribute User user, Model model) {
-        Optional<User> optionalUser = userService.findByEmail(user.getEmail());
-        if (optionalUser.isPresent() && userService.authenticate(user.getUsername(), user.getPassword())) {
-            User loggedInUser = optionalUser.get();
-            Group adventureGroup = groupService.findGroupByName("adventure");
-            loggedInUser.getGroups().add(adventureGroup); // Assign to group
-            userService.saveUser(loggedInUser); // Save updates
-            return "redirect:/dashboard";
-        }
-        model.addAttribute("error", "Invalid username or password");
-        return "login";
-    }
 }

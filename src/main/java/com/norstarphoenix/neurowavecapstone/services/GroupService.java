@@ -1,7 +1,5 @@
 package com.norstarphoenix.neurowavecapstone.services;
 
-package com.norstarphoenix.neurowavecapstone.services;
-
 import com.norstarphoenix.neurowavecapstone.models.Group;
 import com.norstarphoenix.neurowavecapstone.repositories.GroupRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,15 +17,21 @@ public class GroupService {
         this.groupRepository = groupRepository;
     }
 
-    public List<Group> findAllGroups() {
+    public List<Group> findAll() {
         return groupRepository.findAll();
     }
 
-    public Group findGroupByName(String name) {
-        return groupRepository.findByName(name);
+    public Group findGroupById(Long id) {
+        return groupRepository.findById(id).orElse(null);
     }
 
     public void saveGroup(Group group) {
         groupRepository.save(group);
+    }
+
+    public Object findAllGroups() { return groupRepository.findAll(); }
+
+    public Group findGroupByName(String groupName) {
+        return groupRepository.findByName(groupName);
     }
 }
